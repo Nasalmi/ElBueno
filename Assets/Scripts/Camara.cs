@@ -10,7 +10,7 @@ public class Camara : MonoBehaviour
     public Vector2 minValues, maxValues;  // Límites para la posición de la cámara
     bool changedCameraValues = false; // Flag para controlar si se cambiaron los valores de la cámara
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update ss
     void Start()
     {
 

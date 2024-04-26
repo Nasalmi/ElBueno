@@ -6,7 +6,7 @@ using TMPro;
 
 public class muerte : MonoBehaviour
 {
-    public GameObject deathScreenUI; // Arrastra el panel de la UI de muerte aquí desde el inspector.
+    public GameObject deathScreenUI; // Arrastra el panel de la UI de muerte aquí desde el inspector..
     private int level;
     private int wave;
     private int[] monstersKilled;

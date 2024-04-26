@@ -10,27 +10,59 @@ public class Player : MonoBehaviour
     public int wave;
     public float timeSpent;
     public int totalGold;
+    public int gold;
+    public int dmg;
+    public int vel;
     public int totalHearts;
+    public int currentHealth;
     public int[] monstersKilled;
-    public muerte pantallaMuerte; // Arrastra el script Muerte aquí desde el inspector.
-    // Start is called before the first frame update
+    public muerte pantallaMuerte; // Arrastra el script Muerte aquí desde el inspector.ç
+
+    public HUD hud; // Arrastra el script HUD aquí desde el inspector.
+    // Start is called before the first frame updates
     void Start()
     {
         level = 1;
         wave = 1;
         timeSpent = 0;
         totalGold = 5;
-        totalHearts = 3;
+        vel = 1;
+        dmg = 1;
+        gold = 15;
+        totalHearts = 12;
+        currentHealth = 3;
         monstersKilled = new int[5];
         for (int i = 0; i < monstersKilled.Length; i++)
         {
             monstersKilled[i] = 0;
         }
+        // Dibujamos la vida por primera vez
+        hud.UpdateHearts(currentHealth, totalHearts);
     }
 
     // Update is called once per frame
     void Update()
     {
+        timeSpent += Time.deltaTime;
+        hud.UpdateInfo(timeSpent, level);
+        if (Input.GetKeyDown(KeyCode.B)) {
+            currentHealth++;
+            gold++;
+            vel++;
+            dmg++;
+            hud.UpdateHearts(currentHealth, totalHearts);
+            hud.UpdateStats(gold, vel, dmg);
+        }
+
+        if (Input.GetKeyDown(KeyCode.N)) {
+            currentHealth--;
+            gold--;
+            vel--;
+            dmg--;
+            hud.UpdateHearts(currentHealth, totalHearts);
+            hud.UpdateStats(gold, vel, dmg);
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             // Datos de prueba para probar la funcion de insertar Partidas
