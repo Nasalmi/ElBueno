@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - player
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - lagrimas
+  - Water
+  - UI
+  - enemigo
+  - pared
+  - enemigo1
+  - enemigo2
+  - enemigo3
+  - enemigo4
+  - player
+  - enemigo5
+  - lagrimaenemigo
+  - enemigo7
+  - enemigo8
+  - enemigo9
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

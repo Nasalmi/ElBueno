@@ -1,0 +1,27 @@
+# Ignore Unity specific files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Ignore all .meta files in the Temp directory
+Temp/**/*.meta
+
+# Ignore other unnecessary files
+*.csproj
+*.vs
+*.unityproj
+*.sln
+*.swp
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Operating System files
+.DS_Store
+._*
+Thumbs.db
